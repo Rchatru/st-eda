@@ -28,11 +28,13 @@ if uploaded_file is not None:
         csv = pd.read_csv(uploaded_file,sep=";",encoding="utf-8")
         return csv
     df = load_csv()
-    # For showing dataframe info
-    buffer = io.StringIO()
-    df.info(verbose=True,buf=buffer)
-    s = buffer.getvalue() 
-    st.write(s)
+
+    with st.expander("See dataset info"):
+        # For showing dataframe info
+        buffer = io.StringIO()
+        df.info(verbose=True,buf=buffer)
+        s = buffer.getvalue() 
+        st.text(s)
 
     pr = ProfileReport(df, explorative=True)
     st.header('**Input DataFrame**')
@@ -52,11 +54,12 @@ else:
             )
             return a
         df = load_data()
-        # For showing dataframe info
-        buffer = io.StringIO()
-        df.info(verbose=True,buf=buffer)
-        s = buffer.getvalue() 
-        st.text(s)
+        with st.expander("See dataset info"):
+            # For showing dataframe info
+            buffer = io.StringIO()
+            df.info(verbose=True,buf=buffer)
+            s = buffer.getvalue() 
+            st.text(s)
 
         pr = ProfileReport(df, explorative=True)
         st.header('**Input DataFrame**')
