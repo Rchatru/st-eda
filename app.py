@@ -10,8 +10,6 @@ st.markdown('''
 
 This is the **EDA App** created in Streamlit using the **pandas-profiling** library.
 
-**Credit:** App built in `Python` + `Streamlit` by [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor))
-
 ---
 ''')
 
@@ -53,3 +51,6 @@ else:
         st.write('---')
         st.header('**Pandas Profiling Report**')
         st_profile_report(pr)
+st.markdown('''
+    **Credit:** App built in `Python` + `Streamlit` adapted by [Roberto}(https://github.com/Rchatru) original idea ([Data Professor](http://youtube.com/dataprofessor))
+''')
