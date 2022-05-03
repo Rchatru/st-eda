@@ -1,3 +1,4 @@
+import io
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -27,7 +28,12 @@ if uploaded_file is not None:
         csv = pd.read_csv(uploaded_file,sep=";",encoding="utf-8")
         return csv
     df = load_csv()
-    st.write(df.dtypes)
+    # For showing dataframe info
+    buffer = io.StringIO()
+    df.info(verbose=True,buf=buffer)
+    s = buffer.getvalue() 
+    st.write(s)
+
     pr = ProfileReport(df, explorative=True)
     st.header('**Input DataFrame**')
     st.write(df)
@@ -46,7 +52,12 @@ else:
             )
             return a
         df = load_data()
-        st.write(df.info(verbose=True))
+        # For showing dataframe info
+        buffer = io.StringIO()
+        df.info(verbose=True,buf=buffer)
+        s = buffer.getvalue() 
+        st.write(s)
+        
         pr = ProfileReport(df, explorative=True)
         st.header('**Input DataFrame**')
         st.write(df)
