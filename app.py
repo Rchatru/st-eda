@@ -29,6 +29,7 @@ if uploaded_file is not None:
         csv = pd.read_csv(uploaded_file,sep=";",encoding="utf-8")
         return csv
     df = load_csv()
+    st.write(df.dtypes)
     pr = ProfileReport(df, explorative=True)
     st.header('**Input DataFrame**')
     st.write(df)
