@@ -46,6 +46,7 @@ else:
             )
             return a
         df = load_data()
+        st.write(df.dtypes)
         pr = ProfileReport(df, explorative=True)
         st.header('**Input DataFrame**')
         st.write(df)
