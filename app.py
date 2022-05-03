@@ -56,7 +56,7 @@ else:
         buffer = io.StringIO()
         df.info(verbose=True,buf=buffer)
         s = buffer.getvalue() 
-        st.dataframe(s)
+        st.text(s)
 
         pr = ProfileReport(df, explorative=True)
         st.header('**Input DataFrame**')
