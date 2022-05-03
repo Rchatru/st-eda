@@ -1,5 +1,7 @@
 # eda-app
 
+Simple Exploratory Data Analysis app build with streamlit. It accepts csv files as input and takes advantage of the pandas_profiling library to display a quick report about the dataset.
+
 *Adapted from Ken Jee's amazing tutorial.* [More info on Data Professor's Github](https://github.com/dataprofessor/eda-app)
 
 
