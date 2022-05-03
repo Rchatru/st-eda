@@ -52,5 +52,5 @@ else:
         st.header('**Pandas Profiling Report**')
         st_profile_report(pr)
 st.markdown('''
-    **Credit:** App built in *Python* + **Streamlit** adapted by [Roberto](https://github.com/Rchatru). Original idea ([Data Professor](http://youtube.com/dataprofessor))
+    **Credit:** App built in **Python** + **Streamlit** adapted by [Roberto](https://github.com/Rchatru). Original idea ([Data Professor](http://youtube.com/dataprofessor))
 ''')
