@@ -29,11 +29,11 @@ if uploaded_file is not None:
         return csv
     df = load_csv()
 
+    # For showing dataframe info
+    buffer = io.StringIO()
+    df.info(verbose=True,buf=buffer)
+    s = buffer.getvalue() 
     with st.expander("See dataset info"):
-        # For showing dataframe info
-        buffer = io.StringIO()
-        df.info(verbose=True,buf=buffer)
-        s = buffer.getvalue() 
         st.text(s)
 
     pr = ProfileReport(df, explorative=True)
@@ -54,11 +54,11 @@ else:
             )
             return a
         df = load_data()
+        # For showing dataframe info
+        buffer = io.StringIO()
+        df.info(verbose=True,buf=buffer)
+        s = buffer.getvalue() 
         with st.expander("See dataset info"):
-            # For showing dataframe info
-            buffer = io.StringIO()
-            df.info(verbose=True,buf=buffer)
-            s = buffer.getvalue() 
             st.text(s)
 
         pr = ProfileReport(df, explorative=True)
