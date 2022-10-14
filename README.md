@@ -16,5 +16,5 @@ Simple Exploratory Data Analysis app build with streamlit. It accepts csv files 
 
 Launch the web app:
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/rchatru/st-eda/app.py)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://st-eda.streamlitapp.com/)
 
