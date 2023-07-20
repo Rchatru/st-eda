@@ -2,7 +2,7 @@ import io
 import numpy as np
 import pandas as pd
 import streamlit as st
-from pandas_profiling import ProfileReport
+import ydata_profiling
 from streamlit_pandas_profiling import st_profile_report
 
 
