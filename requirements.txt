@@ -1,5 +1,5 @@
 streamlit==1.23.0
-pandas==2.0.0
-numpy==1.24.2
+pandas==2.*
+numpy==1.*
 ydata-profiling
 streamlit-pandas-profiling @ git+https://github.com/bwest2397/streamlit-pandas-profiling
