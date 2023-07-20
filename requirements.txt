@@ -3,3 +3,4 @@ pandas==2.*
 numpy==1.*
 ydata-profiling
 streamlit-pandas-profiling @ git+https://github.com/Rchatru/streamlit-pandas-profiling
+setuptools==58.2.0
