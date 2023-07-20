@@ -1,5 +1,5 @@
-streamlit==1.11.1
-pandas==1.3.5
-numpy==1.22.0
-pandas-profiling==3.1.0
-streamlit-pandas-profiling==0.1.3
+streamlit==1.23.0
+pandas==2.0.0
+numpy==1.24.2
+ydata-profiling
+streamlit-pandas-profiling @ git+https://github.com/bwest2397/streamlit-pandas-profiling
